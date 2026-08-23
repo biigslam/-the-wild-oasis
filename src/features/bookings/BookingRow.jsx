@@ -17,7 +17,7 @@ import Table from "../../ui/Table";
 import { useDeleteBooking } from "../../features/bookings/useDeleteBooking";
 import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
-import { useCheckout } from "../../features/check-in-out/useCheckout";
+import { useCheckout } from "../../features/check-in-out/useCheckOut";
 import { format, isToday } from "date-fns";
 
 // v1
