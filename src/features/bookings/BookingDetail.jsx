@@ -13,7 +13,7 @@ import { useBooking } from "./useBooking";
 import Spinner from "../../ui/Spinner";
 import { useNavigate } from "react-router-dom";
 import { HiArrowUpOnSquare } from "react-icons/hi2";
-import { useCheckout } from "../check-in-out/useCheckOut";
+import { useCheckOut } from "../check-in-out/useCheckOut";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { useDeleteBooking } from "./useDeleteBooking";
@@ -27,7 +27,7 @@ const HeadingGroup = styled.div`
 
 function BookingDetail() {
   const { booking, isLoading } = useBooking();
-  const { checkout, isCheckingOut } = useCheckout();
+  const { checkOut, isCheckingOut } = useCheckOut();
   const { deleteBooking, isDeleting } = useDeleteBooking();
 
   const moveBack = useMoveBack();
@@ -66,7 +66,7 @@ function BookingDetail() {
         {status === "checked-in" && (
           <Button
             icon={<HiArrowUpOnSquare />}
-            onClick={() => checkout(bookingId)}
+            onClick={() => checkOut(bookingId)}
             disabled={isCheckingOut}
           >
             Check out

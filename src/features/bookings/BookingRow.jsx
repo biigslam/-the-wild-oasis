@@ -17,7 +17,7 @@ import Table from "../../ui/Table";
 import { useDeleteBooking } from "../../features/bookings/useDeleteBooking";
 import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
-import { useCheckout } from "../../features/check-in-out/useCheckout";
+import { useCheckOut } from "../../features/check-in-out/useCheckOut";
 import { format, isToday } from "date-fns";
 
 // v1
@@ -77,7 +77,7 @@ function BookingRow({
 }) {
   const navigate = useNavigate();
   const { deleteBooking, isDeleting } = useDeleteBooking();
-  const { checkout, isCheckingOut } = useCheckout();
+  const { checkOut, isCheckingOut } = useCheckOut();
 
   // We will not allow editing at this point, as it's too complex for bookings... People just need to delete a booking and create a new one
 
@@ -133,7 +133,7 @@ function BookingRow({
             {status === "checked-in" && (
               <Menus.Button
                 icon={<HiArrowUpOnSquare />}
-                onClick={() => checkout(bookingId)}
+                onClick={() => checkOut(bookingId)}
                 disabled={isCheckingOut}
               >
                 Check out
