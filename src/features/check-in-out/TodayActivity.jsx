@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import Heading from "../../ui/Heading";
-import Row from "../../ui/Row";
+import Heading from "../../ui/Heading.jsx";
+import Row from "../../ui/Row.jsx";
 
-import { useTodayActivity } from "./useTodayActivity";
-import Spinner from "../../ui/Spinner";
-import TodayItem from "./TodayItem";
+import { useTodayActivity } from "./useTodayActivity.js";
+import Spinner from "../../ui/Spinner.jsx";
+import TodayItem from "./TodayItem.jsx";
 
 const StyledToday = styled.div`
   /* Box */
@@ -67,7 +67,6 @@ function TodayActivity() {
 }
 
 export default TodayActivity;
-
 
 // import { Link } from 'react-router-dom';
 // import styled from 'styled-components';
