@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import Tag from "../../ui/Tag";
-import { Flag } from "../../ui/Flag";
-import Button from "../../ui/Button";
-import CheckOutButton from "./CheckOutButton";
+import Tag from "../../ui/Tag.jsx";
+import { Flag } from "../../ui/Flag.jsx";
+import Button from "../../ui/Button.jsx";
+import CheckOutButton from "./CheckOutButton.jsx";
 
 const StyledTodayItem = styled.li`
   display: grid;
